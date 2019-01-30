@@ -14,6 +14,9 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("name assign 1 function", "[150,100,200]") {
 	//sample to guide you ---> REQUIRE(gross_pay(5, 5) == 25);
-	
+	REQUIRE(Gross_pay(10, 15) == 150);
+	REQUIRE(Gross_pay(5, 20) == 100);
+	REQUIRE(Gross_pay(20, 10) == 200);
 }
+
 
