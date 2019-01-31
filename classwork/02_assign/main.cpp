@@ -1,6 +1,5 @@
 //Write the include statement for assign02 here
 //Write include for capturing input from keyboard and displaying output to screen
-#include "assign02.cpp"
 #include "assign02.h"
 #include <iostream>
 
