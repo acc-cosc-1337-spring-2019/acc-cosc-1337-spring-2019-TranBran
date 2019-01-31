@@ -18,7 +18,7 @@ int main()
 	//save the input to variables hours and hourly_rate
 	cout << "Enter Hours: ";
 	cin>>hours;
-	cout "input Hourly rate: ";
+	cout << "input Hourly rate: ";
 	cin >> hourly_rate;
 	//Create a double variable named gross_salary
 	//Call the gross_pay function and save its return value to the gross_salary variable
