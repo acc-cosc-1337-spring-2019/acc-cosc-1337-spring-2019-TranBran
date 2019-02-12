@@ -12,6 +12,7 @@ int main()
 	//create a double variable named hourly_rate
 	double hours;
 	double hourly_rate;
+	
 
 	//Prompt user for keyboard input for hours and hourly_rate
 	//save the input to variables hours and hourly_rate
@@ -24,7 +25,7 @@ int main()
 
 	//Display the gross_salary variable as follows:
 	//Example ---->>>     Gross pay: 150.00   
-	cout << "Gross Pay: " << Gross_pay;
+	//cout << "Gross Pay: " << Gross_pay;
 
 	return 0;
 }
