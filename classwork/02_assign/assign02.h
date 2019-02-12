@@ -3,3 +3,6 @@
 //returns a double which is the product of hours and hourly_rate.
 
 double Gross_pay(double hours, double hourly_rate);
+{
+	return hours * hourly_rate;
+}
