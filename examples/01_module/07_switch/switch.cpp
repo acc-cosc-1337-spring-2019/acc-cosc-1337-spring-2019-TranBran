@@ -1,3 +1,4 @@
+#include "switch.h"
 //write include statement for switch header
 
 //Write code for function that accepts a num and returns a string 
@@ -7,3 +8,8 @@
 //returns 'Option 3' when value 3
 //returns 'Option 4' when value 4
 //return 'Invalid Option' otherwise
+
+std::string run_menu(int num)
+{
+	return std::string();
+}

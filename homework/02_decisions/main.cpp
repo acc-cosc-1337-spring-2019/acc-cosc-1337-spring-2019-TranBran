@@ -29,13 +29,12 @@ Display:
 GPA 3.0
 
 */
-bool i = 0;
+
 
 int main() 
 {
-	i = 0;
 
-	for (i < 3, ++i)
+	for (int i = 0; i <3; ++i )
 	{
 		cout << "Letter Grade:  ";
 		cin >> letter_grade;
@@ -49,5 +48,5 @@ int main()
 
 	cout << "Gpa: " << calculate_gpa;
 
-	return ;
+	return (0) ;
 }

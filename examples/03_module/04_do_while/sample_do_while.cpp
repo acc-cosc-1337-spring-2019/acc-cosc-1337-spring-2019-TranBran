@@ -48,7 +48,7 @@ void run_menu()
 	{
 		cout << "Enter a number from 1 to 4";
 		cin >> option;
-		cout << menu_option(option);
+		cout << run_menu (option);
 
 		cout << "Continue? Y or N";
 		cin >> choice;

@@ -5,7 +5,7 @@
 int main() 
 {
 
-	loop_string_w_index("John");
 	//call count letters function
+	loop_vector_w_index();
 	return 0;
 }

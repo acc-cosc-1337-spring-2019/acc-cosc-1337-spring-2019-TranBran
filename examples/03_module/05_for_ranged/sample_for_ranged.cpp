@@ -1,5 +1,8 @@
 #include "sample_for_ranged.h"
 #include<iostream>
+#include<vector>
+
+using std::vector;
 //
 
 void loop_string_w_index(std::string str)
@@ -24,4 +27,27 @@ void loop_string_w_auto(std:: string str)
 	}
 
 
+}
+
+void loop_vector_w_index()
+{
+	vector <int> nums = { 9, 10, 99, 5, 67 };
+
+	for (int i = 0; i < nums.size(); ++i)
+	{
+
+		std::cout << nums[i] << "\n";
+	}
+}
+
+
+void loop_vector_w_auto()
+{
+	vector<int> nums = { 9, 10, 99, 5, 67 };
+
+	for (auto n : nums)
+	{
+
+		std::cout << n << "\n";
+	}
 }

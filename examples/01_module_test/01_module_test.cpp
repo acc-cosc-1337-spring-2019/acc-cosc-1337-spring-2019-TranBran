@@ -9,7 +9,8 @@ TEST_CASE("Verify Test Configuration", "verification") {
 //Create a test case for the if statement using:
 //the number 4 result should be true
 //the number 55 result should be false
-TEST_CASE("")
+
+
 //Create a test case for the if else statement using:
 //the year 1930 result should be 'Silent Generation'
 //the year 1946 result should be 'Baby boomer'
