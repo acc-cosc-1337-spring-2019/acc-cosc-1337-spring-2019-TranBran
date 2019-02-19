@@ -1,38 +1,28 @@
-#include "loops.h"
 #include <iostream>
-using std::cout;
-using std::cin;
+#include "loops.h"
+
+using std::cout; using std::cin;
+
 /*
 Use a do while loop to prompt the user for 
 a number, call the factorial function, and display the number's
 factorial.  Also, loop continues as long as user wants to.
 */
-void prompt_user()
-{
-	int choice;
-	int number;
-	do
-	{
-		
-		cout << "Pick a number";
-
-		cin >> number;
-
-		cout << "Continue? Y or N";
-		cin >> choice;
-
-
-	} while (choice == 'y' || choice == 'Y');
-	{
-		
-
-
-	}
-
-
-}
-
 int main() 
 {
+	char c;
+	int num;
+
+	do 
+	{
+		cout << "Enter number: ";
+		cin >> num;
+		cout << "Factorial: " << factorial(num) <<"\n";
+
+		cout << "Continue y: ";
+		cin >> c;
+	
+	} while (c == 'y' || c == 'Y');
+
 	return 0;
 }

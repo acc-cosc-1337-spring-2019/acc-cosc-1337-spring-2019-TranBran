@@ -1,33 +1,22 @@
-//Write code for void function prompt_user to loop until
 #include<iostream>
-#include"sample_do_while.h"
-#include"switch.h"
+#include "sample_do_while.h"
+#include "switch.h"
+
 using std::cout;
 using std::cin;
 
+//Write code for void function prompt_user to loop until
 //user opts not to continue.  
-
 void prompt_user()
 {
-
 	int choice;
-	do
+	do 
 	{
-
-		cout << "Enter 1 to continue";
+		cout << "Enter 1 to continue: ";
 		cin >> choice;
-
-
-
-	}while (choice == 1);
-	{
-
-
-
-	}
-
+	
+	} while (choice == 1);
 }
-
 
 
 //Write code for function run_menu that prompts  user for a 
@@ -37,27 +26,20 @@ Use the existing menu_option function from /example/01_module/07_switch
 folder.
 
 */
-
 void run_menu()
 {
-
 	int option;
 	char choice;
 
-	do
+	do 
 	{
-		cout << "Enter a number from 1 to 4";
+		cout << "Enter number from 1 to 4";
 		cin >> option;
-		cout << run_menu (option);
+		cout << menu_option(option);
 
-		cout << "Continue? Y or N";
+		cout << "Continue? y or n";
 		cin >> choice;
 
-
-
 	} while (choice == 'y' || choice == 'Y');
-	{
-
-
-	}
 }
+

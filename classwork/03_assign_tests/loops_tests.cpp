@@ -12,13 +12,9 @@ factorial of 3 returns   6
 factorial of 4 returns  24
 factorial if 5 returns 120
 */
-
-TEST_CASE("Factorial Value Return")
+TEST_CASE("Test Factorial") 
 {
 	REQUIRE(factorial(3) == 6);
 	REQUIRE(factorial(4) == 24);
 	REQUIRE(factorial(5) == 120);
-
-
-
 }
