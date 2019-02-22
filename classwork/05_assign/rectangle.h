@@ -4,4 +4,25 @@ has one public function area that returns the area of the rectangle, and one pri
 that calculates area of the rectangle.  The class has 3 int private variables area, width, and height.
 */
 
-int return_val();
+class Rectangle
+{
+public:
+
+	Rectangle(int width, int height, int area);
+
+	int Get_Area(int width, int height) const;
+
+
+
+
+
+private:
+
+	void calculate_area(int width, int height);
+	int Area;
+	int Width;
+	int Height;
+
+
+
+}
