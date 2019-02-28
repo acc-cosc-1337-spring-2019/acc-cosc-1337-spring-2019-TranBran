@@ -14,21 +14,14 @@ Width	Height		Area
 100		10			1000
 
 */
-
-TEST_CASE("Test Rectangles")
+TEST_CASE("TESTING") 
 {
-	/*
-	Rectangle area(4, 5, 20);
-	area.calculate_area(4, 5);
-	REQUIRE(area.Get_Area() == 20);
+	acc::Rectangle rec1(4, 5);
+	REQUIRE(rec1.get_area() == 20);
 
-	Rectangle area(10, 10, 100);
-	area.calculate_area(10, 10);
-	REQUIRE(area.Get_Area() == 100);
+	acc::Rectangle rec2(10, 10);
+	REQUIRE(rec2.get_area() == 100);
 
-	Rectangle area(100, 10, 1000);
-	area.calculate_area(100, 10);
-	REQUIRE(area.Get_Area() == 1000);
-	*/
-
+	acc::Rectangle rec3(100, 10);
+	REQUIRE(rec3.get_area() == 1000);
 }

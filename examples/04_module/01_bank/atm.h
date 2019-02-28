@@ -1,22 +1,16 @@
+#include "bank_account.h"
 
 #ifndef ATM_H
 #define ATM_H
-#include "bank_account.h"
 
-class ATM
+class ATM 
 {
 public:
-
-	ATM();
+	ATM() : account(1, 5) {}
 	void display_balance();
 
-
-
-
 private:
-	BankAccount account (12345, 500);
-
-
+	BankAccount account;
 };
 
-#endif //BAN
+#endif // !ATM_H
