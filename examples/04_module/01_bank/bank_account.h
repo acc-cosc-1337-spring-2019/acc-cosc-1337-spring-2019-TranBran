@@ -4,6 +4,7 @@
 class BankAccount
 {
 public:
+	//BankAccount(); // Default Constructor
 	BankAccount(int act, double bal);
 	double get_balance() const;
 	void deposit(double amount);

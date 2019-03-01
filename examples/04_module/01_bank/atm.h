@@ -1,16 +1,17 @@
-#include "bank_account.h"
+#include "customer.h"
 
+// While coding with more than one class
 #ifndef ATM_H
 #define ATM_H
 
 class ATM 
 {
 public:
-	ATM() : account(1, 5) {}
+	ATM(Customer c) : customer(c) {}
 	void display_balance();
 
 private:
-	BankAccount account;
+	Customer customer;
 };
 
 #endif // !ATM_H
