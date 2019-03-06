@@ -9,6 +9,8 @@ using std::cin;
 using std::string;
 using std::vector;
 
+
+
 int main()
 {
 	string input1 = "1";
