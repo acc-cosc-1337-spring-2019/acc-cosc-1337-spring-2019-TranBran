@@ -210,3 +210,53 @@ TEST_CASE("Test No Winner ")
 	REQUIRE(tic_tac_toe.game_over() == true);
 
 }
+
+TEST_CASE("Test X Winner ")
+{
+	TicTacToe tic_tac_toe("X");
+
+	tic_tac_toe.start_game("X");
+
+	tic_tac_toe.mark_board(5);
+	//X
+
+	tic_tac_toe.mark_board(4);
+	//O
+
+	tic_tac_toe.mark_board(1);
+	//X
+
+	tic_tac_toe.mark_board(2);
+	//O
+
+	tic_tac_toe.mark_board(9);
+	//X
+
+	REQUIRE(tic_tac_toe.game_over() == true);
+
+}
+
+TEST_CASE("Test O Winner ")
+{
+	TicTacToe tic_tac_toe("O");
+
+	tic_tac_toe.start_game("O");
+
+	tic_tac_toe.mark_board(5);
+	//O
+
+	tic_tac_toe.mark_board(4);
+	//X
+
+	tic_tac_toe.mark_board(1);
+	//O
+
+	tic_tac_toe.mark_board(2);
+	//X
+
+	tic_tac_toe.mark_board(9);
+	//O
+
+	REQUIRE(tic_tac_toe.game_over() == true);
+
+}

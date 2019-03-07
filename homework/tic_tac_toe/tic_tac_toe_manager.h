@@ -1,9 +1,12 @@
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
 //Write class interface here
+#include "tic_tac_toe.h"
+#include <vector>
+#include <string>
 
-
-#endif // !TIC_TAC_TOE_MANAGER_H
+using std::vector;
+using std::string;
 
 class Tic_Tac_Toe_Manager
 {
@@ -23,11 +26,15 @@ public:
 
 private:
 
+	std::vector <TicTacToe> games;
 
+	int X_Win;
+	int O_Win;
+	int ties;
 
-
-
-
+	void update_winner_count(std::string winner);
 
 
 };
+
+#endif // !TIC_TAC_TOE_MANAGER_H

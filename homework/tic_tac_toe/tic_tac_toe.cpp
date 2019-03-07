@@ -1,3 +1,4 @@
+
 #include "tic_tac_toe.h"
 #include <iostream>
 #include <string>
@@ -33,11 +34,26 @@ bool TicTacToe:: game_over()
 	if (check_column_win() || check_row_win() || check_diagonal_win())
 	{
 
+		set_winner();
+
 		return true;
 
 	}
 
-	return false;
+	else if (check_board_full())
+	{
+		
+		set_winner();
+
+		return true;
+
+	}
+	else
+	{
+
+		return false;
+
+	}
 
 }
 
@@ -46,10 +62,13 @@ void TicTacToe::mark_board(int position)
 
 	pegs[position - 1] = next_player;
 
-	game_over();
+	if (game_over() == false)
+	{
 
-	set_next_player();
-	
+		set_next_player();
+
+
+	}
 
 }
 
@@ -87,6 +106,12 @@ void TicTacToe::display_board()
 
 
 
+}
+
+std::string TicTacToe::get_winner()
+{
+	
+	return std::string( winner);
 }
 
 
@@ -210,3 +235,24 @@ bool TicTacToe::check_board_full()
 
 	return true;
 }
+
+void TicTacToe::set_winner()
+{
+	if (check_board_full())
+	{
+
+		winner = "C";
+
+	}
+
+	else
+	{
+
+		winner = next_player;
+
+	}
+
+}
+
+
+

@@ -1,5 +1,5 @@
 #include "tic_tac_toe.h"
-
+#include "tic_tac_toe_manager.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -18,6 +18,8 @@ int main()
 	string input2 = "1";
 
 	int entry;
+
+	Tic_Tac_Toe_Manager M ;
 
 	while (input2 == "1")
 	{
@@ -38,13 +40,44 @@ int main()
 
 		}
 
+		string winner = game.get_winner();
+
+		if ( winner == "C")
+		{
+
+			cout << "Tie Game :( ";
+
+		}
+
+		else
+		{
+
+			cout << winner << " Wins";
+
+		}
+
+		cout << "\n";
+
 		game.display_board();
 
-		cout << "\n Player " << game.get_player() << " Lost ";
+		M.Tic_Tac_Toe_Manager::save_game(game);
 
-		cout << "Enter 1 to play again, or any other key to quit ";
+		//cout << "\n Player " << game.get_player() << " Lost ";
+
+		cout << "Enter 1 to play again, Enter a 2 for Game history, or any other key to quit ";
 		cin >> input2;
 
+		if (input2 == "2")
+		{
+
+			M.Tic_Tac_Toe_Manager::display_history();
+
+
+		}
+		
 	}
-	return 0;
+	while (input2 == "1");
+
+
+	return(0);
 }

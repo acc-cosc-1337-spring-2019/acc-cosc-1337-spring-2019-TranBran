@@ -1,3 +1,6 @@
+#ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
+
 #include<string>
 #include <vector>
 
@@ -18,6 +21,8 @@ public:
 
 	void display_board();
 
+	std::string get_winner();
+
 private:
 	std::string next_player;
 
@@ -35,4 +40,14 @@ private:
 
 	bool check_board_full();
 
+	std::string winner;
+	
+
+	void set_winner();
+
 };
+
+
+
+
+#endif //TIC_TAC_TOE_H
