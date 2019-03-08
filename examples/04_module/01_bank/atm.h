@@ -7,11 +7,12 @@
 class ATM 
 {
 public:
-	ATM(Customer c) : customer(c) {}
+	ATM(Customer& c) : customer(c) {}
 	void display_balance();
-
+	void deposit(double amount);
+	void withdraw(double amount);
 private:
-	Customer customer;
+	Customer& customer;
 };
 
 #endif // !ATM_H

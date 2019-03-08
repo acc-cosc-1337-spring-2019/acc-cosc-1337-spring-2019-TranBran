@@ -6,8 +6,10 @@ int main()
 	BankAccount account(123456, 500);
 	Customer customer(account);
 	ATM atm(customer);
-	atm.display_balance();
+
 	
+	atm.display_balance();
+	atm.deposit(50);
 	display(account);
 
 	BankAccount b(1, 900);
