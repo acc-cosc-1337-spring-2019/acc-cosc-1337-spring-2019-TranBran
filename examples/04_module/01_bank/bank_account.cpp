@@ -6,6 +6,10 @@ BankAccount::BankAccount(int act, double bal) :
 }
 double BankAccount::get_balance() const
 {
+	std::string type("Inquiry");
+	Transaction t(type, 0, balance);
+	//transactions.push_back(Transaction("Inquiry", 0,balance));
+
 	return balance;
 }
 

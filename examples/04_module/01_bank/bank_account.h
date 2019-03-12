@@ -1,6 +1,8 @@
 #ifndef BANK_ACCOUNT_H
 #define BANK_ACCOUNT_H
+#include "Transaction.h"
 #include <iostream>
+#include <vector>
 class BankAccount
 {
 public:
@@ -15,7 +17,13 @@ public:
 	friend std::ostream & operator << (std::ostream & out, 
 		                                 const BankAccount & b);
 
+	//friend std::istream & operator << (std::istream & in,
+	//	const BankAccount & b);
+
+
 private:
+
+	std::vector < Transaction > transactions;
 	int account_number;
 	double balance;
 	bool amount_greater_zero(double amount);
