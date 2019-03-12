@@ -63,7 +63,7 @@ void Tic_Tac_Toe_Manager::update_winner_count(std::string winner)
 
 	else if (winner == "O")
 	
-	++O_Win;
+		++O_Win;
 	
 
 	else if  (winner == "C")
