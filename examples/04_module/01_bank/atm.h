@@ -11,6 +11,8 @@ public:
 	void display_balance();
 	void deposit(double amount);
 	void withdraw(double amount);
+
+	void display_transactions() const;
 private:
 	Customer& customer;
 };

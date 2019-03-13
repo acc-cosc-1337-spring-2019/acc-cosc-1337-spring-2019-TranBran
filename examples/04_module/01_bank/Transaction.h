@@ -1,6 +1,7 @@
 #ifndef TRANSACTION_H
 #define TRANSCACTION_H
 #include <string>
+#include <iostream>
 
 
    // a struct is a class that has everything public by default

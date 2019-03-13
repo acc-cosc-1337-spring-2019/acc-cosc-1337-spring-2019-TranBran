@@ -17,6 +17,8 @@ public:
 	friend std::ostream & operator << (std::ostream & out, 
 		                                 const BankAccount & b);
 
+	std::vector<Transaction> get_transaction() const;
+
 	//friend std::istream & operator << (std::istream & in,
 	//	const BankAccount & b);
 
