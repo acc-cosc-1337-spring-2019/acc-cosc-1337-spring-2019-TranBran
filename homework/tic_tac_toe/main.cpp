@@ -32,8 +32,7 @@ int main()
 		{
 			game.display_board();
 
-			cout << "\n Player " << game.get_player() << " enter a postion to mark (1-9): ";
-			cin >> entry;
+			cin >> game;
 
 			game.mark_board(entry);
 

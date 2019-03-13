@@ -254,5 +254,25 @@ void TicTacToe::set_winner()
 
 }
 
+std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
+{
+	
+
+	return out;
+
+
+}
+
+std::istream & operator<<(std::istream & in, TicTacToe & t)
+{
+	int position;
+	cout << "Enter a Position 1- 9: " << "\n";
+	in >> position;
+	t.mark_board(position);
+
+	return in;
+
+
+}
 
 

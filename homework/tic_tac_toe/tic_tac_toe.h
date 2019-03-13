@@ -23,6 +23,12 @@ public:
 
 	std::string get_winner();
 
+	friend std::ostream & operator<<(std::ostream & out, TicTacToe & t);
+
+	friend std::istream & operator << (std::istream & in,
+			const TicTacToe & t);
+
+
 private:
 	std::string next_player;
 
