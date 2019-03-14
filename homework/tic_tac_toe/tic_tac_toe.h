@@ -19,7 +19,7 @@ public:
 
 	void mark_board(int position);
 
-	void display_board();
+	void game_board();
 
 	std::string get_winner();
 
@@ -28,11 +28,13 @@ public:
 	friend std::istream & operator << (std::istream & in,
 			const TicTacToe & t);
 
-
+	
 private:
+
 	std::string next_player;
 
 	std:: vector <std::string>pegs{ 9, " " };
+
 
 	void set_next_player();
 

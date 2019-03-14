@@ -20,6 +20,7 @@ public:
 
 	void display_history()const;
 
+	friend std::ostream & operator<<(std::ostream & out, Tic_Tac_Toe_Manager & t);
 
 
 

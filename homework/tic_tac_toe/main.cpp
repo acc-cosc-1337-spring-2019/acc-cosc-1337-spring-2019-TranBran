@@ -30,8 +30,8 @@ int main()
 
 		while (game.game_over() == false)
 		{
-			game.display_board();
-
+			
+			cout << game;
 			cin >> game;
 
 			game.mark_board(entry);

@@ -33,23 +33,7 @@ using std::string;
 void Tic_Tac_Toe_Manager::display_history() const
 {
 
-	int i = 1;
-
-	for (auto g : games)
-	{
-		cout << " Game " << i << " ";
-
-		g.display_board();
-
-		cout << "\n";
-
-		++i;
-
-		g.get_winner();
-
-	}
-
-	cout << " X Wins: " << X_Win << " O Wins: " << O_Win << " Ties: " << ties;
+	
 
 
 }
@@ -71,4 +55,29 @@ void Tic_Tac_Toe_Manager::update_winner_count(std::string winner)
 		++ties;
 		
 
+}
+
+std::ostream & operator<<(std::ostream & out, Tic_Tac_Toe_Manager & t)
+{
+int i = 1;
+
+	for (auto g : games)
+	{
+		cout << " Game " << i << " ";
+
+		g.display_board();
+
+		cout << "\n";
+
+		++i;
+
+		g.get_winner();
+
+	}
+
+	cout << " X Wins: " << X_Win << " O Wins: " << O_Win << " Ties: " << ties;
+
+
+
+	// TODO: insert return statement here
 }

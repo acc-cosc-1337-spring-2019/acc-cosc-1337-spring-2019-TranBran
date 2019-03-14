@@ -82,7 +82,7 @@ void TicTacToe::clear_board()
 }
 
 
-void TicTacToe::display_board()
+void TicTacToe::game_board()
 {
 	int i = 0;
 
@@ -254,9 +254,11 @@ void TicTacToe::set_winner()
 
 }
 
-std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
+std::ostream & operator<<(std::ostream & out, TicTacToe & t)
 {
 	
+	
+	out << t.game_board;
 
 	return out;
 
