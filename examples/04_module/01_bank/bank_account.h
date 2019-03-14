@@ -8,7 +8,7 @@ class BankAccount
 public:
 	//BankAccount(); // Default Constructor
 	BankAccount(int act, double bal);
-	double get_balance() const;
+	virtual double get_balance() const;
 	void deposit(double amount);
 	void deposit(int pin, double ammount);
 	void withdraw(double amount);
