@@ -1,82 +1,41 @@
-#include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
-#include <vector>
 #include <string>
 #include <iostream>
-
-using std::cout;
-using std::cin;
-using std::string;
-using std::vector;
+using std::cout; using std::cin;
 
 
-
-int main()
+int main() 
 {
-	string input1 = "1";
+	std::string first;
+	char choice;
+	int position;
+	TicTacToeManager manager;
 
-	string input2 = "1";
-
-	int entry;
-
-	Tic_Tac_Toe_Manager M ;
-
-	while (input2 == "1")
+	do 
 	{
-		cout << "Enter X or O to pick who goes first: ";
-		cin >> input1;
+		TicTacToe tic_tac_toe;
 
-		TicTacToe game (input1) ;
+		cout << "First player: ";
+		cin >> first;
+		tic_tac_toe.start_game(first);
 
-		while (game.game_over() == false)
+		while (tic_tac_toe.game_over() == false) 
 		{
-			
-			cout << game;
-			cin >> game;
-
-			game.mark_board(entry);
-
-
+			cin >> tic_tac_toe;
+			cout << tic_tac_toe;
+			cout << "\n\n";
 		}
 
-		string winner = game.get_winner();
+		cout<<"Winner: " << tic_tac_toe.get_winner();
 
-		if ( winner == "C")
-		{
+		manager.save_game(tic_tac_toe);
 
-			cout << "Tie Game :( ";
+		cout << "play again";
+		cin >> choice;
 
-		}
+	} while (choice == 'y');
 
-		else
-		{
+	cout<<manager;
 
-			cout << winner << " Wins";
-
-		}
-
-		cout << "\n";
-
-		game.display_board();
-
-		M.Tic_Tac_Toe_Manager::save_game(game);
-
-		//cout << "\n Player " << game.get_player() << " Lost ";
-
-		cout << "Enter 1 to play again, Enter a 2 for Game history, or any other key to quit ";
-		cin >> input2;
-
-		if (input2 == "2")
-		{
-
-			M.Tic_Tac_Toe_Manager::display_history();
-
-
-		}
-		
-	}
-	while (input2 == "1");
-
-
-	return(0);
+	return 0;
 }

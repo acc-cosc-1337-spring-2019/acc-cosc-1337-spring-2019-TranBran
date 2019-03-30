@@ -1,83 +1,39 @@
 #include "tic_tac_toe_manager.h"
-#include "tic_tac_toe.h"
+
 //Write class function implementations here
 
-#include <iostream>
-#include <string>
-#include <vector>
-
-using std::cout;
-using std::string;
-
-	Tic_Tac_Toe_Manager::Tic_Tac_Toe_Manager()
-
+void TicTacToeManager::save_game(const TicTacToe game)
 {
+	update_winner_count(game.get_winner());
+	games.push_back(game);
 }
 
-	void Tic_Tac_Toe_Manager::save_game(const TicTacToe b)
+void TicTacToeManager::update_winner_count(std::string winner)
+{
+	if (winner == "C") 
 	{
+		ties++;
+	}
+	else if (winner == "X") 
+	{
+		x_win++;
+	}
+	else if (winner == "O") 
+	{
+		o_win++;
+	}
+}
 
-		games.push_back(b);
-
-		TicTacToe c = b;
-
-
-		string winner = c.get_winner();
-
-
-		update_winner_count(winner);
-
-
+std::ostream & operator<<(std::ostream & out, const TicTacToeManager & t)
+{
+	for (auto game : t.games)
+	{
+		out << game;
 	}
 
-void Tic_Tac_Toe_Manager::display_history() const
-{
+	out << "X wins: " << t.x_win << "\n";
+	out << "O wins: " << t.o_win << "\n";
+	out << "Ties: " << t.ties << "\n";
 
-	
-
-
-}
-
-void Tic_Tac_Toe_Manager::update_winner_count(std::string winner)
-{
-
-	if (winner == "X")
-		++X_Win;
-
-
-	else if (winner == "O")
-	
-		++O_Win;
-	
-
-	else if  (winner == "C")
-		
-		++ties;
-		
-
-}
-
-std::ostream & operator<<(std::ostream & out, Tic_Tac_Toe_Manager & t)
-{
-int i = 1;
-
-	for (auto g : games)
-	{
-		cout << " Game " << i << " ";
-
-		g.display_board();
-
-		cout << "\n";
-
-		++i;
-
-		g.get_winner();
-
-	}
-
-	cout << " X Wins: " << X_Win << " O Wins: " << O_Win << " Ties: " << ties;
-
-
-
-	// TODO: insert return statement here
+	return out;
 }
