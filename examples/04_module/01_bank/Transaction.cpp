@@ -1,11 +1,8 @@
-#include "Transaction.h"
+#include "transaction.h"
 
 std::ostream & operator<<(std::ostream & out, const Transaction & t)
 {
-	
-	//out << "Type    " << "Amount    " << "Balance    ";
-	out << t.type << " " << t.amount << " " << t.balance<<"\n";// TODO: insert return statement here
+	out << t.type << " " <<t.amount << " " <<t.balance <<"\n";
 
-	//Overload the ostream operator
 	return out;
 }

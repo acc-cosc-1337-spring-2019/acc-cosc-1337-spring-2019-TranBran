@@ -5,38 +5,25 @@ using std::cout;
 
 void ATM::display_balance()
 {
-	std::cout << "Balance: " << customer.get_account().get_balance();
+	cout << "Balance: " << customer.get_account().get_balance();
 }
 
-
-void ATM::deposit(double amount)
+void ATM::deposit(double amt)
 {
-	
-	BankAccount& account = customer.get_account(); // Completely written out version
-	account.deposit(amount);
-	//customer.get_account().deposit(amount); shortcut method
-
-
+	customer.get_account().deposit(amt);
 }
 
-void ATM::withdraw(double amount)
+void ATM::withdraw(double amt)
 {
-
-	customer.get_account().withdraw(amount);
-
-
+	customer.get_account().withdraw(amt);
 }
+
 void ATM::display_transactions() const
 {
-	for (auto tran : customer.get_account().get_transaction()); // auto makes it easy to iterate a vector
+	cout << "Type   " << "Amount  " << " Balance  ";
+
+	for (auto tran : customer.get_account().get_transactions()) 
 	{
-		// does all the work behind the scenes
-
 		std::cout << tran;
-
 	}
-
-
 }
-// since we tested the  functionality of the bank account
-// we dont need to test atm because atm uses bank acount logic

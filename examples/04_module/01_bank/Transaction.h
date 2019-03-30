@@ -1,44 +1,19 @@
 #ifndef TRANSACTION_H
-#define TRANSCACTION_H
-#include <string>
-#include <iostream>
-
-
-   // a struct is a class that has everything public by default
+#define TRANSACTION_H
+#include<string>
+#include<iostream>
 
 class Transaction
 {
 public:
-
-	Transaction(std::string& t, double amt, double bal) :
+	Transaction(const std::string t, double amt, double bal) :
 		type(t), amount(amt), balance(bal) {}
-
 	friend std::ostream & operator << (std::ostream & out,
-		const Transaction & t);
-
+		const Transaction &t);
 private:
-
-	std::string type; // Refers to the type of transaction " Deposit withdraw etc."
-	double amount; // displays the amount of the transaction
+	std::string type;//"Deposit" "Withdraw" "Inquiry"
+	double amount;
 	double balance;
-
-
-
-
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#endif
+#endif // !TRANSACTION_H

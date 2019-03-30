@@ -1,21 +1,15 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
-#include"bank_account.h"
-class Customer
+#include "bank_account.h"
+
+class Customer 
 {
 public:
-
-	Customer(BankAccount act) : account(act) {}
+	Customer(BankAccount& act) : account(act) {}
 	BankAccount& get_account();
 private:
-
-	BankAccount& account; // By making it a reference. when it is  refered to later when the variable is called.
-
+	BankAccount& account;
 
 };
 
-
-
-
-
-#endif // CUSTOMER_H
+#endif // !CUSTOMER_H

@@ -7,7 +7,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 }
 TEST_CASE("test BankAccount initialization")
 {
-	BankAccount account(1, 100);
+	BankAccount account(1, 100);//instance of a class; create a variable 
 	REQUIRE(account.get_balance() == 100);
 }
 
