@@ -2,6 +2,7 @@
 #define APP_H
 #include <wx/wx.h>
 
+// create an app that inherits from wxapp
 class App : public wxApp
 {
 public:
