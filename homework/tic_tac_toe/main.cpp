@@ -1,6 +1,9 @@
 #include "tic_tac_toe_manager.h"
 #include <string>
 #include <iostream>
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
+#include "tic_tac_toe.h"
 using std::cout; using std::cin;
 
 
@@ -9,26 +12,42 @@ int main()
 	std::string first;
 	char choice;
 	int position;
+	int size;
 	TicTacToeManager manager;
 
 	do 
 	{
-		TicTacToe tic_tac_toe;
+		TicTacToe* t; // creates a pointer to the tic tac toe class
 
+		cout << "Do you want to play a 3 x 3 tic toe? or a 4 x 4 tic tac toe? \n press 3 for 3x3, press 4 for 4x4 ";
+		cin >> size; // takes user input and stores the value in size variable
 		cout << "First player: ";
 		cin >> first;
-		tic_tac_toe.start_game(first);
 
-		while (tic_tac_toe.game_over() == false) 
+		if (size == 3)
 		{
-			cin >> tic_tac_toe;
-			cout << tic_tac_toe;
+
+			t = new TicTacToe3();
+
+		}
+
+		else if (size == 4)
+		{
+			t = new TicTacToe4();
+		}
+		
+		t->start_game(first);
+
+		while (t -> game_over() == false) 
+		{
+			cin >> *t;
+			cout << *t ;
 			cout << "\n\n";
 		}
 
-		cout<<"Winner: " << tic_tac_toe.get_winner();
+		cout<<"Winner: " << t->get_winner();
 
-		manager.save_game(tic_tac_toe);
+		//manager.save_game( *t ); //getting an error here for some reason
 
 		cout << "play again";
 		cin >> choice;
