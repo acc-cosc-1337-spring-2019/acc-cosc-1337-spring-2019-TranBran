@@ -1,14 +1,20 @@
+#ifndef TIC_TAC_TOE
+#define TIC_TAC_TOE
+
 #include<iostream>
 #include<string>
 #include<vector>
 
+enum GameType
+{
+	three = 3,
+	four = 4
+};
+
 class TicTacToe 
 {
 public:
-	//SomeConstructor(int s) :some_vector(s*s, " " ){}//this will initialize some_vector to s*s elements of " "
-
-	TicTacToe(int size) : pegs(size*size, " ") {} //{ 9, " ", 16, " "; }
-
+	TicTacToe(GameType game_type) : pegs(game_type * game_type, " ") {}
 	void start_game(std::string first_player);
 	std::string get_player() const;
 	bool game_over();
@@ -20,20 +26,19 @@ public:
 		TicTacToe & t);
 
 protected:
-
-	 std::vector<std::string> pegs;
+	std::vector<std::string> pegs;
 	virtual bool check_column_win();
 	virtual bool check_row_win();
 	virtual bool check_diagonal_win();
 
 private:
 	std::string next_player;
-
 	std::string winner;
 
 	void set_next_player();
-	
 	void clear_board();
 	bool check_board_full();
 	void set_winner();
 };
+
+#endif // !TIC_TAC_TOE
