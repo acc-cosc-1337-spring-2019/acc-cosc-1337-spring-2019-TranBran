@@ -72,21 +72,6 @@ std::string TicTacToe::get_winner() const
 	return winner;
 }
 
-bool TicTacToe::check_column_win()
-{
-	return false;
-}
-
-bool TicTacToe::check_row_win()
-{
-	return false;
-}
-
-bool TicTacToe::check_diagonal_win()
-{
-	return false;
-}
-
 void TicTacToe::set_winner() 
 {
 	if (check_board_full()) 
