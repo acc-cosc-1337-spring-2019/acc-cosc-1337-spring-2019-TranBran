@@ -53,7 +53,7 @@ wxBoxSizer * Panel::get_box_sizer()
 
 	auto amount_label = new wxStaticText(this, wxID_ANY, wxT("Amount: "),
 		wxDefaultPosition, wxSize(70, -1));
-	vbox1->Add(transaction_text, 0);
+	vbox1->Add(amount_label, 0);
 
 	transaction_text = new wxTextCtrl(this, wxID_ANY);
 	vbox1->Add(transaction_text, 0);
