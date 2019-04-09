@@ -41,7 +41,7 @@ int main()
 
 		manager->save_game(std::move(tic_tac_toe));
 
-		cout << "play again";
+		cout << " play again";
 		cin >> choice;
 
 	} while (choice == 'y');
