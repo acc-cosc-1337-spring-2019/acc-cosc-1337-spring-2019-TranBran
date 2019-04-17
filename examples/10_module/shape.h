@@ -7,7 +7,7 @@ class Shape
 public:
 
 	Shape(wxDC* dc) : device_context(dc) {}
-	virtual void draw() = 0;
+	virtual void draw() = 0; // each derived class wil provide its own draw functionality
 
 protected:
 
