@@ -9,6 +9,9 @@
 #include "line.h"
 #include "text.h"
 
+using std::unique_ptr;
+using std::make_unique;
+
 class ClockGraphic
 {
 public:
