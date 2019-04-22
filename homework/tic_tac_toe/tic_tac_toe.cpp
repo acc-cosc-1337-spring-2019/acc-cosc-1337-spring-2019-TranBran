@@ -84,10 +84,49 @@ void TicTacToe::set_winner()
 	}
 }
 
-const std::vector<std::string>& TicTacToe::get_pegs()
+const std::vector<std::string>& TicTacToe::get_pegs() 
 {
 	return pegs;
+}
 
+/*
+Write code to determine winner.
+If board full game is a tie return.
+  otherwise
+  Iterate vector of string and count Xs, and 0s compare x to o count to determine winner, set the winner class string variable
+*/
+void TicTacToe::determine_winner() 
+{
+	if (check_board_full() == true;)
+	{
+		return "C";
+
+	}
+
+	else 
+	{
+		for (auto p : pegs)
+		{
+			if (p == "X")
+			{
+				x++;
+			}
+			else if (p == "O")
+			{
+				o++;
+			}
+			if (x > o)
+			{
+				return "X";
+			}
+			else if (o < x)
+			{
+				return "O";
+
+			}
+		}
+
+		return string();
 }
 
 std::ostream & operator<<(std::ostream & out, const TicTacToe & t)

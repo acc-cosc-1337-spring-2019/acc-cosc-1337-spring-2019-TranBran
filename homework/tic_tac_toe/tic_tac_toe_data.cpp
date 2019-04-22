@@ -11,8 +11,18 @@ writing and append.
 */
 void TicTacToeData::save_game(const vector<string>& pegs)
 {
-	
+	// a) Update  void save_pegs(const std::vector<string>& pegs) 
+	//Iterate vector of string to write to file, add a "\n" after each iteration(loop) to create a new line after looping vector of string.
 
+	fstream file(file_name, std::ios::out | std::ios::app);
+
+	for (auto p : pegs)
+	{
+		file << p;
+		file << "\n";
+	}
+
+	file.close();
 }
 
 /*
@@ -41,9 +51,37 @@ Create unique ptr of TicTacToe boards
 
 		return the  vector  of TicTacToe
 */
+// look at temp data example
 vector<unique_ptr<TicTacToe>> TicTacToeData::get_games()
 {
-	vector<unique_ptr<TicTacToe>> games;
+	vector<unique_ptr<TicTacToe>> boards();
+
+	fstream file(file_name, std::ios::in);
+
+	if (file.is_open())
+	{
+		while (std::getline(file, line))
+		{
+			vector<string> peg;
+			for (int i = 0; i < line.size(); i++)
+			{
+				peg.push_back(string(1, line[i]));
+				
+			}
+			std::unique_ptr<TicTacToe> board();
+			if (peg.size() == 9)
+			{
+				board = std::make_unique<TicTacToe3>(peg);
+				games.push_back(board);
+			}
+			else if (peg.size() == 16)
+			{
+				board = std::make_unique<TicTacToe3>(peg);
+				games.push_back(board);
+			}
+
+		}
+	}
 
 	return games;
 }

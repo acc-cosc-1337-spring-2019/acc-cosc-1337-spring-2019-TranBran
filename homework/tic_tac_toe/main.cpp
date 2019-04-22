@@ -15,16 +15,13 @@ int main()
 	int game_choice;
 
 	std::unique_ptr<TicTacToe> tic_tac_toe;
-	GameType type;
-	
 
 	do 
 	{
 		cout << "Tic tac toe 3 or 4: ";
 		cin >> game_choice;
 
-		tic_tac_toe = manager->get_game(game_choice);
-		
+		tic_tac_toe = manager->get_game((GameType)game_choice);
 
 		cout << "First player: ";
 		cin >> first;
@@ -39,9 +36,9 @@ int main()
 
 		cout<<"Winner: " << tic_tac_toe->get_winner();
 
-		manager->save_game(std::move(tic_tac_toe));
+		manager->save_game(tic_tac_toe);
 
-		cout << " play again";
+		cout << "play again";
 		cin >> choice;
 
 	} while (choice == 'y');
