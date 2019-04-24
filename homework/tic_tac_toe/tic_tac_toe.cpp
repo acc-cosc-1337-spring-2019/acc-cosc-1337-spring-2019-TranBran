@@ -1,4 +1,5 @@
 #include "tic_tac_toe.h"
+#include"tic_tac_toe_manager.h"
 #include<iostream>
 #include<math.h>
 
@@ -109,17 +110,17 @@ void TicTacToe::determine_winner()
 		{
 			if (p == "X")
 			{
-				x++;
+				x_win++;
 			}
 			else if (p == "O")
 			{
-				o++;
+				o_win++;
 			}
-			if (x > o)
+			if (x_win > 0_win)
 			{
 				return "X";
 			}
-			else if (o < x)
+			else if (0 win < x_win)
 			{
 				return "O";
 
